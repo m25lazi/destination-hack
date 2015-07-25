@@ -17,6 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[self navigationController] setNavigationBarHidden:YES animated:YES];
+    
     [self.collectionView setDataSource:self];
     [self.collectionView setDelegate:self];
     [self.collectionView registerNib:[UINib nibWithNibName:@"PopularImageView" bundle:nil] forCellWithReuseIdentifier:FLCellFactoryImageListIdentifier];

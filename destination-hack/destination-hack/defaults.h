@@ -9,6 +9,6 @@
 #ifndef destination_hack_defaults_h
 #define destination_hack_defaults_h
 
-#define kHackServerUrl         @"106.51.119.197"//@"https://ind10230.airwatch.corp"
+#define kHackServerUrl         @"http://192.168.7.1:5000/destihack"//@"https://ind10230.airwatch.corp"
 
 #endif

@@ -11,6 +11,7 @@
 #import "LoginHandler.h"
 #import "LoaderView.h"
 #import "NSDictionary+JSON.h"
+#import "HUserHandler.h"
 
 @interface SignInViewController ()<NSURLConnectionDataDelegate>{
     BOOL isSilentAuth;
@@ -68,24 +69,16 @@ didSignInForUser:(GIDGoogleUser *)user
         
         NSLog(@"LOGIN : %@, %@, %@, %@", userId, idToken, name, email);
         
+        [self updateCurrentUserAccountWithGid:userId name:name email:email];
+        
         NSDictionary *data = @{
                                @"gid": userId,
-                               @"fname": name,
+                               @"name": name,
                                @"email": email,
                                };
         
         
         [self sendRequestToServer:data];
-        //Send server request
-        /*
-         
-         signin?
-         
-         Signup?
-         */
-        
-        //NSURLConnection
-        //[self userSignedUp];
         
     }
     isSilentAuth = NO;
@@ -109,20 +102,6 @@ didDisconnectWithUser:(GIDGoogleUser *)user
     // Pass the selected object to the new view controller.
 }
 */
-- (void)userSignedIn{
-    //directly to feed
-}
-
-- (void)userSignedUp{
-    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LoginStoryboard" bundle:nil];
-    UIViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"interestedScreen"];
-    [self.navigationController presentViewController:vc animated:YES completion:nil];
-     //pushViewController:vc animated:YES];
-}
-
-
-
-
 
 #pragma mark - server request
 
@@ -135,15 +114,30 @@ didDisconnectWithUser:(GIDGoogleUser *)user
         return;
     }
     
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/destihack/login", kHackServerUrl]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/login", kHackServerUrl]];
     NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
     [urlRequest setHTTPMethod:@"POST"];
     
     [urlRequest setHTTPBody:jsonData];
     NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self startImmediately:YES];
+    if(connection){
+        NSLog(@"Request sent : %@", [NSString stringWithFormat:@"%@/login", kHackServerUrl]);
+    }
     [LoaderView showLoaderViewFor:self];
     
 }
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
+    [LoaderView hideLoaderViewFrom:self];
+    
+    NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+    NSLog(@"Connection Response : %ld", (long)httpResponse.statusCode);
+    if (httpResponse.statusCode != 200) {
+        [_signinButton setHidden:NO];
+        [LoaderView showFatalErrorFor:self text:@"Server Error, Try Later :("];
+    }
+}
+
 
 // This method is used to receive the data which we get using post method.
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData*)data{
@@ -156,17 +150,55 @@ didDisconnectWithUser:(GIDGoogleUser *)user
         return;
     }
     
+    NSArray *userDetails = response[@"user"];
+    NSInteger uid = [[userDetails objectAtIndex:0] integerValue];
+    [self updateCurrentUserAccountWithUid:uid];
+    
+    [self showNextScreen:![response[@"exists"] boolValue]];
 }
+ 
 
 // This method receives the error report in case of connection is not made to server.
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
+    NSLog(@"Connection failed to : %@ with error : %@", [[connection.currentRequest URL] absoluteString], error);
     [_signinButton setHidden:NO];
     [LoaderView hideLoaderViewFrom:self];
     [LoaderView showFatalErrorFor:self text:@"Server Error, Try Later :("];
 }
 
-// This method is used to process the data after connection has made successfully.
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection{
-    [LoaderView hideLoaderViewFrom:self];
+#pragma mark - login completed from g+
+- (void)updateCurrentUserAccountWithGid:(NSString *)gid name:(NSString *)name email:(NSString *)email{
+    HUserHandler *handler = [HUserHandler sharedHandler];
+    handler.currentUser.googleId = gid;
+    handler.currentUser.name = name;
+    handler.currentUser.email = email;
 }
+
+#pragma mark - login completed from hack-server
+- (void)updateCurrentUserAccountWithUid:(NSInteger)uid{
+    HUserHandler *handler = [HUserHandler sharedHandler];
+    handler.currentUser.userId = uid;
+}
+
+#pragma mark - Signin/Signup Completed
+- (void)showNextScreen:(BOOL)showInterests{
+    if(showInterests)
+        [self userSignedUp];
+    else
+        [self userSignedIn];
+}
+
+- (void)userSignedIn{
+    NSLog(@"Signin done");
+    //directly to feed
+}
+
+- (void)userSignedUp{
+     NSLog(@"Signup done");
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LoginStoryboard" bundle:nil];
+    UIViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"interestedScreen"];
+    [self.navigationController presentViewController:vc animated:YES completion:nil];
+    //pushViewController:vc animated:YES];
+}
+ 
 @end

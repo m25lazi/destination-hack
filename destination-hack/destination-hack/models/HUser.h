@@ -11,7 +11,7 @@
 @interface HUser : NSObject
 
 @property (nonatomic, strong) NSString *googleId;
-@property (nonatomic, strong) NSString *userId;
+@property (nonatomic) NSInteger userId;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *email;
 

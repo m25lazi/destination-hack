@@ -15,6 +15,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedHandler = [[self alloc] init];
+        sharedHandler.currentUser = [[HUser alloc] init];
     });
     return sharedHandler;
 }

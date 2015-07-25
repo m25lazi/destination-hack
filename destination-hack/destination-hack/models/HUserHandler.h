@@ -13,4 +13,6 @@
 
 @property (strong, nonatomic) HUser *currentUser;
 
++ (id)sharedHandler;
+
 @end
