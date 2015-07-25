@@ -13,7 +13,6 @@
 		BB0780991B634A56004F95C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB0780971B634A56004F95C2 /* Main.storyboard */; };
 		BB07809C1B634A56004F95C2 /* destination_hack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BB07809A1B634A56004F95C2 /* destination_hack.xcdatamodeld */; };
 		BB07809E1B634A56004F95C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB07809D1B634A56004F95C2 /* Assets.xcassets */; };
-		BB0780A11B634A56004F95C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB07809F1B634A56004F95C2 /* LaunchScreen.storyboard */; };
 		BB0780AE1B6356D6004F95C2 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB0780AD1B6356D6004F95C2 /* AddressBook.framework */; };
 		BB0780B01B636E4D004F95C2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB0780AF1B636E4D004F95C2 /* SystemConfiguration.framework */; };
 		BB0780B91B63703E004F95C2 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BB0780B71B63703E004F95C2 /* GoogleSignIn.bundle */; };
@@ -21,6 +20,7 @@
 		BB0780BE1B6371CE004F95C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB0780BD1B6371CE004F95C2 /* GoogleService-Info.plist */; };
 		BB0780C01B63720C004F95C2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB0780BF1B63720C004F95C2 /* StoreKit.framework */; };
 		BB0780C71B6372A4004F95C2 /* LoginHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0780C61B6372A4004F95C2 /* LoginHandler.m */; };
+		BBF7CC441B6376C500CB51B2 /* LaunchHack.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBF7CC431B6376C500CB51B2 /* LaunchHack.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +43,7 @@
 		BB0780BF1B63720C004F95C2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		BB0780C51B6372A4004F95C2 /* LoginHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginHandler.h; path = "Login Handler/LoginHandler.h"; sourceTree = "<group>"; };
 		BB0780C61B6372A4004F95C2 /* LoginHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginHandler.m; path = "Login Handler/LoginHandler.m"; sourceTree = "<group>"; };
+		BBF7CC431B6376C500CB51B2 /* LaunchHack.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchHack.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +95,7 @@
 				BB0780A21B634A56004F95C2 /* Info.plist */,
 				BB07809A1B634A56004F95C2 /* destination_hack.xcdatamodeld */,
 				BB0780BD1B6371CE004F95C2 /* GoogleService-Info.plist */,
+				BBF7CC431B6376C500CB51B2 /* LaunchHack.storyboard */,
 			);
 			path = "destination-hack";
 			sourceTree = "<group>";
@@ -185,9 +187,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB0780B91B63703E004F95C2 /* GoogleSignIn.bundle in Resources */,
-				BB0780A11B634A56004F95C2 /* LaunchScreen.storyboard in Resources */,
 				BB0780BE1B6371CE004F95C2 /* GoogleService-Info.plist in Resources */,
 				BB07809E1B634A56004F95C2 /* Assets.xcassets in Resources */,
+				BBF7CC441B6376C500CB51B2 /* LaunchHack.storyboard in Resources */,
 				BB0780991B634A56004F95C2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +360,7 @@
 				BB0780A71B634A56004F95C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
