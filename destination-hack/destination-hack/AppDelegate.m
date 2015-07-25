@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "LoginHandler.h"
+#import <GoogleSignIn/GoogleSignIn.h>
 
 @interface AppDelegate ()
 
@@ -16,7 +18,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [GIDSignIn sharedInstance].clientID = @"204619250114-g98dnei4ea8nfuauf377ndovcocbttv4.apps.googleusercontent.com";
     // Override point for customization after application launch.
+    
+    
     return YES;
 }
 
@@ -122,6 +128,18 @@
             abort();
         }
     }
+}
+
+
+
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    return [[GIDSignIn sharedInstance] handleURL:url
+                               sourceApplication:sourceApplication
+                                      annotation:annotation];
 }
 
 @end
