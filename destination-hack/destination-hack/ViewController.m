@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MainPage.h"
 
 @interface ViewController ()
 
