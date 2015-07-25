@@ -34,6 +34,15 @@
 		BB0780C01B63720C004F95C2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB0780BF1B63720C004F95C2 /* StoreKit.framework */; };
 		BB0780C71B6372A4004F95C2 /* LoginHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0780C61B6372A4004F95C2 /* LoginHandler.m */; };
 		BBF7CC441B6376C500CB51B2 /* LaunchHack.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBF7CC431B6376C500CB51B2 /* LaunchHack.storyboard */; };
+		BBF7CC461B63796500CB51B2 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBF7CC451B63796500CB51B2 /* LoginStoryboard.storyboard */; };
+		BBF7CC491B63828700CB51B2 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CC481B63828700CB51B2 /* SignInViewController.m */; };
+		BBF7CC4D1B639CAB00CB51B2 /* LoaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CC4C1B639CAB00CB51B2 /* LoaderView.m */; };
+		BBF7CC511B63A9E500CB51B2 /* SelectionControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CC501B63A9E500CB51B2 /* SelectionControl.m */; };
+		BBF7CC541B63AD3600CB51B2 /* InterestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CC531B63AD3600CB51B2 /* InterestsViewController.m */; };
+		BBF7CC561B63AE2D00CB51B2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBF7CC551B63AE2D00CB51B2 /* QuartzCore.framework */; };
+		BBF7CC5B1B63FAEE00CB51B2 /* HUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CC5A1B63FAEE00CB51B2 /* HUser.m */; };
+		BBF7CC5E1B63FB8200CB51B2 /* HUserHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CC5D1B63FB8200CB51B2 /* HUserHandler.m */; };
+		BBF7CC611B63FD9800CB51B2 /* NSDictionary+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CC601B63FD9800CB51B2 /* NSDictionary+JSON.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +82,23 @@
 		BB0780C51B6372A4004F95C2 /* LoginHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginHandler.h; path = "Login Handler/LoginHandler.h"; sourceTree = "<group>"; };
 		BB0780C61B6372A4004F95C2 /* LoginHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginHandler.m; path = "Login Handler/LoginHandler.m"; sourceTree = "<group>"; };
 		BBF7CC431B6376C500CB51B2 /* LaunchHack.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchHack.storyboard; sourceTree = "<group>"; };
+		BBF7CC451B63796500CB51B2 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LoginStoryboard.storyboard; path = "Login Handler/LoginStoryboard.storyboard"; sourceTree = "<group>"; };
+		BBF7CC471B63828600CB51B2 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		BBF7CC481B63828700CB51B2 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		BBF7CC4B1B639CAB00CB51B2 /* LoaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoaderView.h; path = Loader/LoaderView.h; sourceTree = "<group>"; };
+		BBF7CC4C1B639CAB00CB51B2 /* LoaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoaderView.m; path = Loader/LoaderView.m; sourceTree = "<group>"; };
+		BBF7CC4F1B63A9E500CB51B2 /* SelectionControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectionControl.h; path = uicontrol/SelectionControl.h; sourceTree = "<group>"; };
+		BBF7CC501B63A9E500CB51B2 /* SelectionControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectionControl.m; path = uicontrol/SelectionControl.m; sourceTree = "<group>"; };
+		BBF7CC521B63AD3600CB51B2 /* InterestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InterestsViewController.h; path = "Login Handler/InterestsViewController.h"; sourceTree = "<group>"; };
+		BBF7CC531B63AD3600CB51B2 /* InterestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InterestsViewController.m; path = "Login Handler/InterestsViewController.m"; sourceTree = "<group>"; };
+		BBF7CC551B63AE2D00CB51B2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BBF7CC571B63F8B900CB51B2 /* defaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = defaults.h; sourceTree = "<group>"; };
+		BBF7CC591B63FAEE00CB51B2 /* HUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HUser.h; path = models/HUser.h; sourceTree = "<group>"; };
+		BBF7CC5A1B63FAEE00CB51B2 /* HUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HUser.m; path = models/HUser.m; sourceTree = "<group>"; };
+		BBF7CC5C1B63FB8200CB51B2 /* HUserHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HUserHandler.h; path = models/HUserHandler.h; sourceTree = "<group>"; };
+		BBF7CC5D1B63FB8200CB51B2 /* HUserHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HUserHandler.m; path = models/HUserHandler.m; sourceTree = "<group>"; };
+		BBF7CC5F1B63FD9800CB51B2 /* NSDictionary+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+JSON.h"; path = "models/NSDictionary+JSON.h"; sourceTree = "<group>"; };
+		BBF7CC601B63FD9800CB51B2 /* NSDictionary+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+JSON.m"; path = "models/NSDictionary+JSON.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBF7CC561B63AE2D00CB51B2 /* QuartzCore.framework in Frameworks */,
 				BB0780C01B63720C004F95C2 /* StoreKit.framework in Frameworks */,
 				BB0780B01B636E4D004F95C2 /* SystemConfiguration.framework in Frameworks */,
 				BB0780BA1B63703E004F95C2 /* GoogleSignIn.framework in Frameworks */,
@@ -144,6 +171,7 @@
 		BB0780821B634A56004F95C2 = {
 			isa = PBXGroup;
 			children = (
+				BBF7CC551B63AE2D00CB51B2 /* QuartzCore.framework */,
 				BB0780BF1B63720C004F95C2 /* StoreKit.framework */,
 				BB07808D1B634A56004F95C2 /* destination-hack */,
 				BB07808E1B634A56004F95C2 /* Supporting Files */,
@@ -163,6 +191,9 @@
 		BB07808D1B634A56004F95C2 /* destination-hack */ = {
 			isa = PBXGroup;
 			children = (
+				BBF7CC581B63F98F00CB51B2 /* model */,
+				BBF7CC4E1B63A9AB00CB51B2 /* uicontroller */,
+				BBF7CC4A1B639C8300CB51B2 /* View */,
 				BB0780C11B63722B004F95C2 /* Login Handler */,
 				BB07808C1B634A56004F95C2 /* Products */,
 				BB0780911B634A56004F95C2 /* AppDelegate.h */,
@@ -180,6 +211,7 @@
 				BB07809A1B634A56004F95C2 /* destination_hack.xcdatamodeld */,
 				BB0780BD1B6371CE004F95C2 /* GoogleService-Info.plist */,
 				BBF7CC431B6376C500CB51B2 /* LaunchHack.storyboard */,
+				BBF7CC571B63F8B900CB51B2 /* defaults.h */,
 			);
 			path = "destination-hack";
 			sourceTree = "<group>";
@@ -210,8 +242,44 @@
 			children = (
 				BB0780C51B6372A4004F95C2 /* LoginHandler.h */,
 				BB0780C61B6372A4004F95C2 /* LoginHandler.m */,
+				BBF7CC451B63796500CB51B2 /* LoginStoryboard.storyboard */,
+				BBF7CC471B63828600CB51B2 /* SignInViewController.h */,
+				BBF7CC481B63828700CB51B2 /* SignInViewController.m */,
+				BBF7CC521B63AD3600CB51B2 /* InterestsViewController.h */,
+				BBF7CC531B63AD3600CB51B2 /* InterestsViewController.m */,
 			);
 			name = "Login Handler";
+			sourceTree = "<group>";
+		};
+		BBF7CC4A1B639C8300CB51B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BBF7CC4B1B639CAB00CB51B2 /* LoaderView.h */,
+				BBF7CC4C1B639CAB00CB51B2 /* LoaderView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BBF7CC4E1B63A9AB00CB51B2 /* uicontroller */ = {
+			isa = PBXGroup;
+			children = (
+				BBF7CC4F1B63A9E500CB51B2 /* SelectionControl.h */,
+				BBF7CC501B63A9E500CB51B2 /* SelectionControl.m */,
+			);
+			name = uicontroller;
+			sourceTree = "<group>";
+		};
+		BBF7CC581B63F98F00CB51B2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				BBF7CC591B63FAEE00CB51B2 /* HUser.h */,
+				BBF7CC5A1B63FAEE00CB51B2 /* HUser.m */,
+				BBF7CC5C1B63FB8200CB51B2 /* HUserHandler.h */,
+				BBF7CC5D1B63FB8200CB51B2 /* HUserHandler.m */,
+				BBF7CC5F1B63FD9800CB51B2 /* NSDictionary+JSON.h */,
+				BBF7CC601B63FD9800CB51B2 /* NSDictionary+JSON.m */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +349,7 @@
 				3E7CD47D1B63B80500105BFD /* PopularImageView.xib in Resources */,
 				3E7CD46B1B63999900105BFD /* content-swipe-option-rename@2x.png in Resources */,
 				3E7CD46D1B63999900105BFD /* edit@2x.png in Resources */,
+				BBF7CC461B63796500CB51B2 /* LoginStoryboard.storyboard in Resources */,
 				BBF7CC441B6376C500CB51B2 /* LaunchHack.storyboard in Resources */,
 				3E7CD4601B63816700105BFD /* profile_picture_by_tahiry99-d46vd4e.jpg in Resources */,
 				3E7CD4671B638A8100105BFD /* 1437826227_menu-alt.png in Resources */,
@@ -300,8 +369,15 @@
 				BB07809C1B634A56004F95C2 /* destination_hack.xcdatamodeld in Sources */,
 				3E7CD4701B639D3700105BFD /* UserProfile.m in Sources */,
 				3E7CD47A1B63A7E200105BFD /* CellFactory.m in Sources */,
+				BBF7CC611B63FD9800CB51B2 /* NSDictionary+JSON.m in Sources */,
+				BBF7CC4D1B639CAB00CB51B2 /* LoaderView.m in Sources */,
 				BB0780931B634A56004F95C2 /* AppDelegate.m in Sources */,
+				BBF7CC511B63A9E500CB51B2 /* SelectionControl.m in Sources */,
+				BBF7CC541B63AD3600CB51B2 /* InterestsViewController.m in Sources */,
 				BB0780901B634A56004F95C2 /* main.m in Sources */,
+				BBF7CC5B1B63FAEE00CB51B2 /* HUser.m in Sources */,
+				BBF7CC5E1B63FB8200CB51B2 /* HUserHandler.m in Sources */,
+				BBF7CC491B63828700CB51B2 /* SignInViewController.m in Sources */,
 				BB0780C71B6372A4004F95C2 /* LoginHandler.m in Sources */,
 				3E7CD4851B63BE9800105BFD /* MainPage.m in Sources */,
 			);
@@ -420,6 +496,7 @@
 				INFOPLIST_FILE = "destination-hack/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iostream.destination-hack";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -434,6 +511,7 @@
 				INFOPLIST_FILE = "destination-hack/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iostream.destination-hack";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

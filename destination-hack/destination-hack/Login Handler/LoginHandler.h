@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <GoogleSignIn/GoogleSignIn.h>
+#import "SignInViewController.h"
 
-@interface LoginHandler : NSObject
-
+@interface LoginHandler : NSObject<GIDSignInDelegate>
++ (id)sharedHandler;
+- (void)startAuthenticating:(SignInViewController *)vc;
 @end
