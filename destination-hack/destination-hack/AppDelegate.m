@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LoginHandler.h"
+#import "WindowHandler.h"
 #import <GoogleSignIn/GoogleSignIn.h>
 
 @interface AppDelegate ()
@@ -20,8 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [GIDSignIn sharedInstance].clientID = @"204619250114-g98dnei4ea8nfuauf377ndovcocbttv4.apps.googleusercontent.com";
-    // Override point for customization after application launch.
-    
+    [[WindowHandler sharedHandler] setDelegate:self];
     
     return YES;
 }

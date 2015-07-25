@@ -7,9 +7,15 @@
 //
 
 #import "InterestsViewController.h"
+#import "HUserHandler.h"
+#import "WindowHandler.h"
 #import "SelectionControl.h"
+#import "ServerHelper.h"
+#import "LoaderView.h"
+#import "NSArray+JSON.h"
+#import "defaults.h"
 
-@interface InterestsViewController ()<SelectionControlTapDelegate>{
+@interface InterestsViewController ()<SelectionControlTapDelegate, NSURLConnectionDataDelegate>{
     NSMutableArray *selectedInterests;
 }
 
@@ -33,7 +39,7 @@
 }
 
 - (IBAction)readyButtonPressed:(id)sender {
-    
+    [self sendInterests];
 }
 - (void)viewDidAppear:(BOOL)animated{
     [self setDelegatesForControllers];
@@ -75,5 +81,34 @@
     [selectedInterests removeObject:text];
     [self controlVisibilityOfGoButton];
 }
+
+#pragma mark - Server requests
+- (void)sendInterests{
+    [ServerHelper sendAsyncPostUserRequestWithUrlPath:@"/interests" bodyInfo:@{@"interests":selectedInterests} delegate:self];
+    [LoaderView showLoaderViewFor:self];
+    
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
+    [LoaderView hideLoaderViewFrom:self];
+    
+    NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+    NSLog(@"Connection Response : %ld", (long)httpResponse.statusCode);
+    if (httpResponse.statusCode == 200){
+        [[WindowHandler sharedHandler] showMainFeed];
+    }
+    else{
+        [LoaderView showFatalErrorFor:self text:@"Server Error, Try Later :("];
+    }
+}
+
+
+// This method receives the error report in case of connection is not made to server.
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
+    NSLog(@"Connection failed to : %@ with error : %@", [[connection.currentRequest URL] absoluteString], error);
+    [LoaderView hideLoaderViewFrom:self];
+    [LoaderView showFatalErrorFor:self text:@"Server Error, Try Later :("];
+}
+
 
 @end

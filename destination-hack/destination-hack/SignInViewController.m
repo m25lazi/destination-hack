@@ -12,6 +12,7 @@
 #import "LoaderView.h"
 #import "NSDictionary+JSON.h"
 #import "HUserHandler.h"
+#import "WindowHandler.h"
 
 @interface SignInViewController ()<NSURLConnectionDataDelegate>{
     BOOL isSilentAuth;
@@ -190,7 +191,8 @@ didDisconnectWithUser:(GIDGoogleUser *)user
 
 - (void)userSignedIn{
     NSLog(@"Signin done");
-    //directly to feed
+    
+    [[WindowHandler sharedHandler] showMainFeed];
 }
 
 - (void)userSignedUp{

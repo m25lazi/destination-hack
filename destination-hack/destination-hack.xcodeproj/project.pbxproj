@@ -40,6 +40,9 @@
 		BBF7CC5B1B63FAEE00CB51B2 /* HUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CC5A1B63FAEE00CB51B2 /* HUser.m */; };
 		BBF7CC5E1B63FB8200CB51B2 /* HUserHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CC5D1B63FB8200CB51B2 /* HUserHandler.m */; };
 		BBF7CC611B63FD9800CB51B2 /* NSDictionary+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CC601B63FD9800CB51B2 /* NSDictionary+JSON.m */; };
+		BBF7CC651B6439F400CB51B2 /* WindowHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CC641B6439F400CB51B2 /* WindowHandler.m */; };
+		BBF7CC681B643C6600CB51B2 /* NSArray+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CC671B643C6600CB51B2 /* NSArray+JSON.m */; };
+		BBF7CC6B1B643E9E00CB51B2 /* ServerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CC6A1B643E9E00CB51B2 /* ServerHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +97,12 @@
 		BBF7CC5D1B63FB8200CB51B2 /* HUserHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HUserHandler.m; path = models/HUserHandler.m; sourceTree = "<group>"; };
 		BBF7CC5F1B63FD9800CB51B2 /* NSDictionary+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+JSON.h"; path = "models/NSDictionary+JSON.h"; sourceTree = "<group>"; };
 		BBF7CC601B63FD9800CB51B2 /* NSDictionary+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+JSON.m"; path = "models/NSDictionary+JSON.m"; sourceTree = "<group>"; };
+		BBF7CC631B6439F400CB51B2 /* WindowHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowHandler.h; sourceTree = "<group>"; };
+		BBF7CC641B6439F400CB51B2 /* WindowHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowHandler.m; sourceTree = "<group>"; };
+		BBF7CC661B643C6600CB51B2 /* NSArray+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+JSON.h"; path = "models/NSArray+JSON.h"; sourceTree = "<group>"; };
+		BBF7CC671B643C6600CB51B2 /* NSArray+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+JSON.m"; path = "models/NSArray+JSON.m"; sourceTree = "<group>"; };
+		BBF7CC691B643E9E00CB51B2 /* ServerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerHelper.h; path = models/ServerHelper.h; sourceTree = "<group>"; };
+		BBF7CC6A1B643E9E00CB51B2 /* ServerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServerHelper.m; path = models/ServerHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +200,7 @@
 		BB07808D1B634A56004F95C2 /* destination-hack */ = {
 			isa = PBXGroup;
 			children = (
+				BBF7CC621B6439D500CB51B2 /* WindowHandler */,
 				BBF7CC581B63F98F00CB51B2 /* model */,
 				BBF7CC4E1B63A9AB00CB51B2 /* uicontroller */,
 				BBF7CC4A1B639C8300CB51B2 /* View */,
@@ -279,8 +289,21 @@
 				BBF7CC5D1B63FB8200CB51B2 /* HUserHandler.m */,
 				BBF7CC5F1B63FD9800CB51B2 /* NSDictionary+JSON.h */,
 				BBF7CC601B63FD9800CB51B2 /* NSDictionary+JSON.m */,
+				BBF7CC661B643C6600CB51B2 /* NSArray+JSON.h */,
+				BBF7CC671B643C6600CB51B2 /* NSArray+JSON.m */,
+				BBF7CC691B643E9E00CB51B2 /* ServerHelper.h */,
+				BBF7CC6A1B643E9E00CB51B2 /* ServerHelper.m */,
 			);
 			name = model;
+			sourceTree = "<group>";
+		};
+		BBF7CC621B6439D500CB51B2 /* WindowHandler */ = {
+			isa = PBXGroup;
+			children = (
+				BBF7CC631B6439F400CB51B2 /* WindowHandler.h */,
+				BBF7CC641B6439F400CB51B2 /* WindowHandler.m */,
+			);
+			name = WindowHandler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,8 +389,11 @@
 				BB07809C1B634A56004F95C2 /* destination_hack.xcdatamodeld in Sources */,
 				3E7CD4701B639D3700105BFD /* UserProfile.m in Sources */,
 				3E7CD47A1B63A7E200105BFD /* CellFactory.m in Sources */,
+				BBF7CC681B643C6600CB51B2 /* NSArray+JSON.m in Sources */,
+				BBF7CC6B1B643E9E00CB51B2 /* ServerHelper.m in Sources */,
 				BBF7CC611B63FD9800CB51B2 /* NSDictionary+JSON.m in Sources */,
 				BBF7CC4D1B639CAB00CB51B2 /* LoaderView.m in Sources */,
+				BBF7CC651B6439F400CB51B2 /* WindowHandler.m in Sources */,
 				BB0780931B634A56004F95C2 /* AppDelegate.m in Sources */,
 				BBF7CC511B63A9E500CB51B2 /* SelectionControl.m in Sources */,
 				BBF7CC541B63AD3600CB51B2 /* InterestsViewController.m in Sources */,
