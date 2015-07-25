@@ -18,6 +18,9 @@
 		BB0780B01B636E4D004F95C2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB0780AF1B636E4D004F95C2 /* SystemConfiguration.framework */; };
 		BB0780B91B63703E004F95C2 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BB0780B71B63703E004F95C2 /* GoogleSignIn.bundle */; };
 		BB0780BA1B63703E004F95C2 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB0780B81B63703E004F95C2 /* GoogleSignIn.framework */; };
+		BB0780BE1B6371CE004F95C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB0780BD1B6371CE004F95C2 /* GoogleService-Info.plist */; };
+		BB0780C01B63720C004F95C2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB0780BF1B63720C004F95C2 /* StoreKit.framework */; };
+		BB0780C71B6372A4004F95C2 /* LoginHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0780C61B6372A4004F95C2 /* LoginHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,10 @@
 		BB0780AF1B636E4D004F95C2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BB0780B71B63703E004F95C2 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleSignIn.bundle; path = "destination-hack/GoogleFrameworks/GoogleSignIn.bundle"; sourceTree = "<group>"; };
 		BB0780B81B63703E004F95C2 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSignIn.framework; path = "destination-hack/GoogleFrameworks/GoogleSignIn.framework"; sourceTree = "<group>"; };
+		BB0780BD1B6371CE004F95C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "GoogleFrameworks/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BB0780BF1B63720C004F95C2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		BB0780C51B6372A4004F95C2 /* LoginHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginHandler.h; path = "Login Handler/LoginHandler.h"; sourceTree = "<group>"; };
+		BB0780C61B6372A4004F95C2 /* LoginHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginHandler.m; path = "Login Handler/LoginHandler.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB0780C01B63720C004F95C2 /* StoreKit.framework in Frameworks */,
 				BB0780B01B636E4D004F95C2 /* SystemConfiguration.framework in Frameworks */,
 				BB0780BA1B63703E004F95C2 /* GoogleSignIn.framework in Frameworks */,
 				BB0780AE1B6356D6004F95C2 /* AddressBook.framework in Frameworks */,
@@ -55,8 +63,7 @@
 		BB0780821B634A56004F95C2 = {
 			isa = PBXGroup;
 			children = (
-				BB0780AF1B636E4D004F95C2 /* SystemConfiguration.framework */,
-				BB0780AD1B6356D6004F95C2 /* AddressBook.framework */,
+				BB0780BF1B63720C004F95C2 /* StoreKit.framework */,
 				BB07808D1B634A56004F95C2 /* destination-hack */,
 				BB07808E1B634A56004F95C2 /* Supporting Files */,
 				BB0780A81B63553B004F95C2 /* framework */,
@@ -75,6 +82,7 @@
 		BB07808D1B634A56004F95C2 /* destination-hack */ = {
 			isa = PBXGroup;
 			children = (
+				BB0780C11B63722B004F95C2 /* Login Handler */,
 				BB07808C1B634A56004F95C2 /* Products */,
 				BB0780911B634A56004F95C2 /* AppDelegate.h */,
 				BB0780921B634A56004F95C2 /* AppDelegate.m */,
@@ -85,6 +93,7 @@
 				BB07809F1B634A56004F95C2 /* LaunchScreen.storyboard */,
 				BB0780A21B634A56004F95C2 /* Info.plist */,
 				BB07809A1B634A56004F95C2 /* destination_hack.xcdatamodeld */,
+				BB0780BD1B6371CE004F95C2 /* GoogleService-Info.plist */,
 			);
 			path = "destination-hack";
 			sourceTree = "<group>";
@@ -101,10 +110,21 @@
 		BB0780A81B63553B004F95C2 /* framework */ = {
 			isa = PBXGroup;
 			children = (
+				BB0780AF1B636E4D004F95C2 /* SystemConfiguration.framework */,
+				BB0780AD1B6356D6004F95C2 /* AddressBook.framework */,
 				BB0780B71B63703E004F95C2 /* GoogleSignIn.bundle */,
 				BB0780B81B63703E004F95C2 /* GoogleSignIn.framework */,
 			);
 			name = framework;
+			sourceTree = "<group>";
+		};
+		BB0780C11B63722B004F95C2 /* Login Handler */ = {
+			isa = PBXGroup;
+			children = (
+				BB0780C51B6372A4004F95C2 /* LoginHandler.h */,
+				BB0780C61B6372A4004F95C2 /* LoginHandler.m */,
+			);
+			name = "Login Handler";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +186,7 @@
 			files = (
 				BB0780B91B63703E004F95C2 /* GoogleSignIn.bundle in Resources */,
 				BB0780A11B634A56004F95C2 /* LaunchScreen.storyboard in Resources */,
+				BB0780BE1B6371CE004F95C2 /* GoogleService-Info.plist in Resources */,
 				BB07809E1B634A56004F95C2 /* Assets.xcassets in Resources */,
 				BB0780991B634A56004F95C2 /* Main.storyboard in Resources */,
 			);
@@ -182,6 +203,7 @@
 				BB07809C1B634A56004F95C2 /* destination_hack.xcdatamodeld in Sources */,
 				BB0780931B634A56004F95C2 /* AppDelegate.m in Sources */,
 				BB0780901B634A56004F95C2 /* main.m in Sources */,
+				BB0780C71B6372A4004F95C2 /* LoginHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +318,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/**";
 				INFOPLIST_FILE = "destination-hack/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iostream.destination-hack";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -309,6 +332,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/**";
 				INFOPLIST_FILE = "destination-hack/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iostream.destination-hack";
 				PRODUCT_NAME = "$(TARGET_NAME)";
