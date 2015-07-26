@@ -1,5 +1,5 @@
 //
-//  AddReviewVC.h
+//  SearchVC.h
 //  destination-hack
 //
 //  Created by Jubin Benny on 26/07/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddReviewVC : UIViewController <UITextViewDelegate>
+@interface SearchVC : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

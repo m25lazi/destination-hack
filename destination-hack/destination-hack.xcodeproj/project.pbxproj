@@ -11,6 +11,9 @@
 		3E33EB6B1B641926003C51A4 /* Edit-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E33EB681B641926003C51A4 /* Edit-50.png */; };
 		3E33EB6C1B641926003C51A4 /* profile_picture_by_tahiry99-d46vd4e.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3E33EB691B641926003C51A4 /* profile_picture_by_tahiry99-d46vd4e.jpg */; };
 		3E33EB711B64264C003C51A4 /* AddReviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E33EB701B64264C003C51A4 /* AddReviewVC.m */; };
+		3E33EB751B647ED8003C51A4 /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E33EB741B647ED8003C51A4 /* SearchVC.m */; };
+		3E33EB771B6486E4003C51A4 /* 1437898112_Plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E33EB761B6486E4003C51A4 /* 1437898112_Plus.png */; };
+		3E33EB791B6489AC003C51A4 /* 1437898592_Noun_Project_100Icon_10px_grid-46.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E33EB781B6489AC003C51A4 /* 1437898592_Noun_Project_100Icon_10px_grid-46.png */; };
 		3E7CD4701B639D3700105BFD /* UserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7CD46F1B639D3700105BFD /* UserProfile.m */; };
 		3E7CD47A1B63A7E200105BFD /* CellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7CD4791B63A7E200105BFD /* CellFactory.m */; };
 		3E7CD47D1B63B80500105BFD /* PopularImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E7CD47C1B63B80500105BFD /* PopularImageView.xib */; };
@@ -55,6 +58,10 @@
 		3E33EB691B641926003C51A4 /* profile_picture_by_tahiry99-d46vd4e.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "profile_picture_by_tahiry99-d46vd4e.jpg"; path = "supportingFiles/profile_picture_by_tahiry99-d46vd4e.jpg"; sourceTree = "<group>"; };
 		3E33EB6F1B64264C003C51A4 /* AddReviewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddReviewVC.h; sourceTree = "<group>"; };
 		3E33EB701B64264C003C51A4 /* AddReviewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddReviewVC.m; sourceTree = "<group>"; };
+		3E33EB731B647ED8003C51A4 /* SearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchVC.h; sourceTree = "<group>"; };
+		3E33EB741B647ED8003C51A4 /* SearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchVC.m; sourceTree = "<group>"; };
+		3E33EB761B6486E4003C51A4 /* 1437898112_Plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1437898112_Plus.png; path = supportingFiles/1437898112_Plus.png; sourceTree = "<group>"; };
+		3E33EB781B6489AC003C51A4 /* 1437898592_Noun_Project_100Icon_10px_grid-46.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "1437898592_Noun_Project_100Icon_10px_grid-46.png"; path = "supportingFiles/1437898592_Noun_Project_100Icon_10px_grid-46.png"; sourceTree = "<group>"; };
 		3E7CD46E1B639D3700105BFD /* UserProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfile.h; sourceTree = "<group>"; };
 		3E7CD46F1B639D3700105BFD /* UserProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfile.m; sourceTree = "<group>"; };
 		3E7CD4781B63A7E200105BFD /* CellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellFactory.h; sourceTree = "<group>"; };
@@ -145,6 +152,8 @@
 		3E7CD4611B63817400105BFD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				3E33EB781B6489AC003C51A4 /* 1437898592_Noun_Project_100Icon_10px_grid-46.png */,
+				3E33EB761B6486E4003C51A4 /* 1437898112_Plus.png */,
 				3E33EB671B641926003C51A4 /* 1437833503_share.png */,
 				3E33EB681B641926003C51A4 /* Edit-50.png */,
 				3E33EB691B641926003C51A4 /* profile_picture_by_tahiry99-d46vd4e.jpg */,
@@ -226,6 +235,8 @@
 				BB0780951B634A56004F95C2 /* ViewController.m */,
 				3E7CD47E1B63B80E00105BFD /* CollectionViewCellViews */,
 				3E7CD47B1B63A80000105BFD /* CellFactory */,
+				3E33EB731B647ED8003C51A4 /* SearchVC.h */,
+				3E33EB741B647ED8003C51A4 /* SearchVC.m */,
 				3E7CD4861B63BEA500105BFD /* StartingPage */,
 				3E33EB721B64265C003C51A4 /* AddReview */,
 				3E7CD4771B63A58700105BFD /* UserProfile */,
@@ -402,9 +413,11 @@
 				3E33EB6A1B641926003C51A4 /* 1437833503_share.png in Resources */,
 				3E7CD4821B63BB2500105BFD /* FeedsView.xib in Resources */,
 				BB0780B91B63703E004F95C2 /* GoogleSignIn.bundle in Resources */,
+				3E33EB791B6489AC003C51A4 /* 1437898592_Noun_Project_100Icon_10px_grid-46.png in Resources */,
 				3E7CD4801B63B82D00105BFD /* MajorActionViews.xib in Resources */,
 				3E33EB6C1B641926003C51A4 /* profile_picture_by_tahiry99-d46vd4e.jpg in Resources */,
 				BB0780BE1B6371CE004F95C2 /* GoogleService-Info.plist in Resources */,
+				3E33EB771B6486E4003C51A4 /* 1437898112_Plus.png in Resources */,
 				BB07809E1B634A56004F95C2 /* Assets.xcassets in Resources */,
 				3E33EB6B1B641926003C51A4 /* Edit-50.png in Resources */,
 				3E7CD47D1B63B80500105BFD /* PopularImageView.xib in Resources */,
@@ -438,6 +451,7 @@
 				BBF7CC541B63AD3600CB51B2 /* InterestsViewController.m in Sources */,
 				BBF7CC791B64788600CB51B2 /* UserSearch.m in Sources */,
 				BB0780901B634A56004F95C2 /* main.m in Sources */,
+				3E33EB751B647ED8003C51A4 /* SearchVC.m in Sources */,
 				BBF7CC5B1B63FAEE00CB51B2 /* HUser.m in Sources */,
 				BBF7CC5E1B63FB8200CB51B2 /* HUserHandler.m in Sources */,
 				3E33EB711B64264C003C51A4 /* AddReviewVC.m in Sources */,

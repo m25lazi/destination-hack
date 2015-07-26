@@ -30,25 +30,19 @@
 
 #pragma mark - UICollectionView DataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    if (section == 0) {
-        return 4;
-    } else {
-        return 5;
-    }
+    return 9;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 2;
+    return 1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell * cell;
-    if (indexPath.section == 0) {
-        if (indexPath.row == 0) {
-            cell = (UICollectionViewCell *)[CellFactory populateObject:nil atIndexpath:indexPath inView:collectionView withIdentifier:FLCellFactoryImageListIdentifier];
-        } else {
-            cell = (UICollectionViewCell *)[CellFactory populateObject:nil atIndexpath:indexPath inView:collectionView withIdentifier:FLCellFactoryMainActionIdentifier];
-        }
+    if (indexPath.row == 0) {
+        cell = (UICollectionViewCell *)[CellFactory populateObject:nil atIndexpath:indexPath inView:collectionView withIdentifier:FLCellFactoryImageListIdentifier];
+    } else if (indexPath.row  <= 3) {
+        cell = (UICollectionViewCell *)[CellFactory populateObject:nil atIndexpath:indexPath inView:collectionView withIdentifier:FLCellFactoryMainActionIdentifier];
     } else {
         cell = (UICollectionViewCell *)[CellFactory populateObject:nil atIndexpath:indexPath inView:collectionView withIdentifier:FLCellFactoryFeedsIdentifier];
     }
@@ -61,12 +55,10 @@
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {
-        if (indexPath.row ==0) {
-            return CGSizeMake(400, 200);
-        } else {
-            return CGSizeMake(400., 70);
-        }
+    if (indexPath.row ==0) {
+        return CGSizeMake(400, 200);
+    } else if (indexPath.row <= 3){
+        return CGSizeMake(400., 70);
     } else {
         return CGSizeMake(400, 340);
     }
