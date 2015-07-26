@@ -46,6 +46,7 @@
 		BBF7CC731B644A0C00CB51B2 /* HReview.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CC721B644A0C00CB51B2 /* HReview.m */; };
 		BBF7CC761B644D9400CB51B2 /* FeedHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CC751B644D9400CB51B2 /* FeedHandler.m */; };
 		BBF7CC791B64788600CB51B2 /* UserSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CC781B64788600CB51B2 /* UserSearch.m */; };
+		BBF7CC7C1B64876300CB51B2 /* FollowHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CC7B1B64876300CB51B2 /* FollowHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +113,8 @@
 		BBF7CC751B644D9400CB51B2 /* FeedHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FeedHandler.m; path = models/FeedHandler.m; sourceTree = "<group>"; };
 		BBF7CC771B64788600CB51B2 /* UserSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserSearch.h; path = models/UserSearch.h; sourceTree = "<group>"; };
 		BBF7CC781B64788600CB51B2 /* UserSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSearch.m; path = models/UserSearch.m; sourceTree = "<group>"; };
+		BBF7CC7A1B64876300CB51B2 /* FollowHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FollowHandler.h; path = models/FollowHandler.h; sourceTree = "<group>"; };
+		BBF7CC7B1B64876300CB51B2 /* FollowHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FollowHandler.m; path = models/FollowHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,6 +336,8 @@
 				BBF7CC751B644D9400CB51B2 /* FeedHandler.m */,
 				BBF7CC771B64788600CB51B2 /* UserSearch.h */,
 				BBF7CC781B64788600CB51B2 /* UserSearch.m */,
+				BBF7CC7A1B64876300CB51B2 /* FollowHandler.h */,
+				BBF7CC7B1B64876300CB51B2 /* FollowHandler.m */,
 			);
 			name = "Review Recommend";
 			sourceTree = "<group>";
@@ -425,6 +430,7 @@
 				BBF7CC6B1B643E9E00CB51B2 /* ServerHelper.m in Sources */,
 				BBF7CC611B63FD9800CB51B2 /* NSDictionary+JSON.m in Sources */,
 				BBF7CC4D1B639CAB00CB51B2 /* LoaderView.m in Sources */,
+				BBF7CC7C1B64876300CB51B2 /* FollowHandler.m in Sources */,
 				BBF7CC651B6439F400CB51B2 /* WindowHandler.m in Sources */,
 				BB0780931B634A56004F95C2 /* AppDelegate.m in Sources */,
 				BBF7CC731B644A0C00CB51B2 /* HReview.m in Sources */,
