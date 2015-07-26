@@ -179,6 +179,7 @@ didDisconnectWithUser:(GIDGoogleUser *)user
 - (void)updateCurrentUserAccountWithUid:(NSInteger)uid{
     HUserHandler *handler = [HUserHandler sharedHandler];
     handler.currentUser.userId = uid;
+    NSLog(@"user unique id : %ld", (long)uid);
 }
 
 #pragma mark - Signin/Signup Completed
@@ -200,7 +201,6 @@ didDisconnectWithUser:(GIDGoogleUser *)user
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LoginStoryboard" bundle:nil];
     UIViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"interestedScreen"];
     [self.navigationController presentViewController:vc animated:YES completion:nil];
-    //pushViewController:vc animated:YES];
 }
  
 @end

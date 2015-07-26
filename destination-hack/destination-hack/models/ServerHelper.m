@@ -36,4 +36,27 @@
 
 }
 
++ (void)sendAsyncGetUserRequestWithUrlPath:(NSString *)path delegate:(id)delegate{
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",kHackServerUrl, path]];
+    NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
+    [urlRequest setHTTPMethod:@"GET"];
+    
+    
+    //NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithDictionary:info];
+    //[dictionary setObject:[NSNumber numberWithInteger:[[[HUserHandler sharedHandler] currentUser] userId]] forKey:@"uid"];
+    NSError *error;
+    //NSData *jsonData = [dictionary jsonData:&error];
+    
+    if(error){
+        NSLog(@"JSON Error");
+        return;
+    }
+    //[urlRequest setHTTPBody:jsonData];
+    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:delegate startImmediately:YES];
+    if(connection){
+        NSLog(@"Request sent : %@", [url absoluteString]);
+    }
+    
+}
+
 @end

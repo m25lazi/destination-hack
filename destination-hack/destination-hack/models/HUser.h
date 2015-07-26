@@ -14,5 +14,7 @@
 @property (nonatomic) NSInteger userId;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *email;
+@property (nonatomic) BOOL follows;
+@property (nonatomic) BOOL following;
 
 @end

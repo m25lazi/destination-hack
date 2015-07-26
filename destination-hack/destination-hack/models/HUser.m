@@ -10,4 +10,8 @@
 
 @implementation HUser
 
+- (void)followThisUserWithCompletionBlock{
+    
+}
+
 @end

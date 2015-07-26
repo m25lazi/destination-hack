@@ -43,6 +43,9 @@
 		BBF7CC651B6439F400CB51B2 /* WindowHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CC641B6439F400CB51B2 /* WindowHandler.m */; };
 		BBF7CC681B643C6600CB51B2 /* NSArray+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CC671B643C6600CB51B2 /* NSArray+JSON.m */; };
 		BBF7CC6B1B643E9E00CB51B2 /* ServerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CC6A1B643E9E00CB51B2 /* ServerHelper.m */; };
+		BBF7CC731B644A0C00CB51B2 /* HReview.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CC721B644A0C00CB51B2 /* HReview.m */; };
+		BBF7CC761B644D9400CB51B2 /* FeedHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CC751B644D9400CB51B2 /* FeedHandler.m */; };
+		BBF7CC791B64788600CB51B2 /* UserSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CC781B64788600CB51B2 /* UserSearch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +106,12 @@
 		BBF7CC671B643C6600CB51B2 /* NSArray+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+JSON.m"; path = "models/NSArray+JSON.m"; sourceTree = "<group>"; };
 		BBF7CC691B643E9E00CB51B2 /* ServerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerHelper.h; path = models/ServerHelper.h; sourceTree = "<group>"; };
 		BBF7CC6A1B643E9E00CB51B2 /* ServerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServerHelper.m; path = models/ServerHelper.m; sourceTree = "<group>"; };
+		BBF7CC711B644A0C00CB51B2 /* HReview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HReview.h; path = models/HReview.h; sourceTree = "<group>"; };
+		BBF7CC721B644A0C00CB51B2 /* HReview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HReview.m; path = models/HReview.m; sourceTree = "<group>"; };
+		BBF7CC741B644D9400CB51B2 /* FeedHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FeedHandler.h; path = models/FeedHandler.h; sourceTree = "<group>"; };
+		BBF7CC751B644D9400CB51B2 /* FeedHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FeedHandler.m; path = models/FeedHandler.m; sourceTree = "<group>"; };
+		BBF7CC771B64788600CB51B2 /* UserSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserSearch.h; path = models/UserSearch.h; sourceTree = "<group>"; };
+		BBF7CC781B64788600CB51B2 /* UserSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSearch.m; path = models/UserSearch.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +209,8 @@
 		BB07808D1B634A56004F95C2 /* destination-hack */ = {
 			isa = PBXGroup;
 			children = (
+				BBF7CC701B6449F300CB51B2 /* Review Recommend */,
+				BBF7CC6C1B64499A00CB51B2 /* ServerCalls */,
 				BBF7CC621B6439D500CB51B2 /* WindowHandler */,
 				BBF7CC581B63F98F00CB51B2 /* model */,
 				BBF7CC4E1B63A9AB00CB51B2 /* uicontroller */,
@@ -291,8 +302,6 @@
 				BBF7CC601B63FD9800CB51B2 /* NSDictionary+JSON.m */,
 				BBF7CC661B643C6600CB51B2 /* NSArray+JSON.h */,
 				BBF7CC671B643C6600CB51B2 /* NSArray+JSON.m */,
-				BBF7CC691B643E9E00CB51B2 /* ServerHelper.h */,
-				BBF7CC6A1B643E9E00CB51B2 /* ServerHelper.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -304,6 +313,28 @@
 				BBF7CC641B6439F400CB51B2 /* WindowHandler.m */,
 			);
 			name = WindowHandler;
+			sourceTree = "<group>";
+		};
+		BBF7CC6C1B64499A00CB51B2 /* ServerCalls */ = {
+			isa = PBXGroup;
+			children = (
+				BBF7CC691B643E9E00CB51B2 /* ServerHelper.h */,
+				BBF7CC6A1B643E9E00CB51B2 /* ServerHelper.m */,
+			);
+			name = ServerCalls;
+			sourceTree = "<group>";
+		};
+		BBF7CC701B6449F300CB51B2 /* Review Recommend */ = {
+			isa = PBXGroup;
+			children = (
+				BBF7CC711B644A0C00CB51B2 /* HReview.h */,
+				BBF7CC721B644A0C00CB51B2 /* HReview.m */,
+				BBF7CC741B644D9400CB51B2 /* FeedHandler.h */,
+				BBF7CC751B644D9400CB51B2 /* FeedHandler.m */,
+				BBF7CC771B64788600CB51B2 /* UserSearch.h */,
+				BBF7CC781B64788600CB51B2 /* UserSearch.m */,
+			);
+			name = "Review Recommend";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,6 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBF7CC761B644D9400CB51B2 /* FeedHandler.m in Sources */,
 				BB0780961B634A56004F95C2 /* ViewController.m in Sources */,
 				BB07809C1B634A56004F95C2 /* destination_hack.xcdatamodeld in Sources */,
 				3E7CD4701B639D3700105BFD /* UserProfile.m in Sources */,
@@ -395,8 +427,10 @@
 				BBF7CC4D1B639CAB00CB51B2 /* LoaderView.m in Sources */,
 				BBF7CC651B6439F400CB51B2 /* WindowHandler.m in Sources */,
 				BB0780931B634A56004F95C2 /* AppDelegate.m in Sources */,
+				BBF7CC731B644A0C00CB51B2 /* HReview.m in Sources */,
 				BBF7CC511B63A9E500CB51B2 /* SelectionControl.m in Sources */,
 				BBF7CC541B63AD3600CB51B2 /* InterestsViewController.m in Sources */,
+				BBF7CC791B64788600CB51B2 /* UserSearch.m in Sources */,
 				BB0780901B634A56004F95C2 /* main.m in Sources */,
 				BBF7CC5B1B63FAEE00CB51B2 /* HUser.m in Sources */,
 				BBF7CC5E1B63FB8200CB51B2 /* HUserHandler.m in Sources */,
